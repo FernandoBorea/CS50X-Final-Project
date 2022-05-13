@@ -1,17 +1,124 @@
 {% extends "layout.html" %}
 
 {% block body %}
-
-    <div class="px-4 py-5 my-5 text-center">
-        <img class="d-block mx-auto mb-4" src="https://cdn-icons.flaticon.com/png/512/1982/premium/1982771.png?token=exp=1652150346~hmac=622fe202f6a6d4346e723e0868a53715" alt="" width="72" height="57">
-        <h1 class="display-5 fw-bold lh-1">Soluciones Eléctricas</h1>
+    <!--Revisar https://getbootstrap.com/docs/5.1/examples/heroes/ para cambair sección principal e inicio de sección de transformadores-->
+    <div class="px-4 py-4 text-center">
+        <img class="mx-auto rounded img-fluid" src="http://solelectric.com.sv/data1/images/foto.jpg" alt="" style="width: 25%; height: auto; min-width: 350px;">        
         <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4">Somos una empresa salvadoreña con el compromiso hacia la innovación y excelencia. Siendo líderes y pioneros dentro de la región centroamericana en la industria eléctrica, cubrimos un amplio rango de productos y servicios, desde fabricación de transformadores convencionales hasta pruebas avanzadas de laboratorio con equipo de alta calidad.</p>
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
-                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
-            </div>
+            <h1 class="display-5 fw-bold lh-1 mb-4">Somos líderes regionales</h1>
+            <p class="text-start mb-4 fs-5">Con el compromiso hacia la innovación y excelencia. Siendo pioneros dentro de la región centroamericana en la industria eléctrica, cubrimos un amplio rango de productos y servicios, desde fabricación de transformadores convencionales hasta pruebas avanzadas de laboratorio con equipo de alta calidad. Nuestro personal altamente calificado nos permite atender proyectos de cualquier magnitud, así como también realizar mantenimientos a instalaciones eléctricas existentes.</p>
         </div>
     </div>
     
+    <div class="card mb-3 mx-auto" style="width: 90%;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="https://cdn.pixabay.com/photo/2018/10/24/21/30/electrician-3771316_960_720.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Fabricación de transformadores</h5>
+              <p class="card-text">Mediante nuestro taller eléctrico, equipado con maquinaria avanzada y personal altamente calificado, tenemos la capacidad de producción necesaria para suplir cualquier necesidad: desde transformadores comunes para diversas aplicaciones hasta transformadores totalmente personalizados a las necsidades específicas.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <div class="container-fluid px-4 py-3 my-3 mt-0 row row-cols-1 row-cols-md-3 mb-3 text-center ms-0 me-0">
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3 text-white bg-dark">
+                <h4 class="my-0 fw-normal">Convencionales</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">5 ~ 333 KVA</h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>30 users included</li>
+                    <li>15 GB of storage</li>
+                    <li>Phone and email support</li>
+                    <li>Help center access</li>
+                </ul>
+
+                <form class="text-start">
+                    <div class="row mb-3">
+                      <label for="inputEmail3" class="col-sm-4 col-form-label">Correo</label>
+                      <div class="col-auto">
+                        <input type="email" class="form-control" id="inputEmail3">
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="inputEmail3" class="col-sm-4 col-form-label">Capacidad</label>
+                        <div class="col-auto">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Seleccionar primario</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="inputEmail3" class="col-sm-4 col-form-label">Primario</label>
+                        <div class="col-auto">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Seleccionar primario</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="inputEmail3" class="col-sm-4 col-form-label">Secundario</label>
+                        <div class="col-auto">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Seleccionar secundario</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="w-100 btn btn-lg btn-dark">Cotizar</button>
+                  </form>                
+            </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3 text-white bg-dark">
+                <h4 class="my-0 fw-normal">Padmounted</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">5 ~ 333 KVA</h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                <li>20 users included</li>
+                <li>10 GB of storage</li>
+                <li>Priority email support</li>
+                <li>Help center access</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-dark">Cotizar</button>
+            </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3 text-white bg-dark">
+                <h4 class="my-0 fw-normal">Secos</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">5 ~ 333 KVA</h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                <li>30 users included</li>
+                <li>15 GB of storage</li>
+                <li>Phone and email support</li>
+                <li>Help center access</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-dark">Cotizar</button>
+            </div>
+            </div>
+        </div>
+      </div>
+      
 {% endblock %} 
