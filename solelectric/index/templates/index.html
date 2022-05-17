@@ -1,46 +1,21 @@
 {% extends "layout.html" %}
 
 {% block body %}
-    <!--Revisar https://getbootstrap.com/docs/5.1/examples/heroes/ para cambair sección principal e inicio de sección de transformadores-->
-    <!--div class="px-4 py-4 text-center">
-        <img class="mx-auto rounded img-fluid" src="http://solelectric.com.sv/data1/images/foto.jpg" alt="" style="width: 25%; height: auto; min-width: 350px;">        
-        <div class="col-lg-6 mx-auto">
-            <h1 class="display-5 fw-bold lh-1 mb-4">Somos líderes regionales</h1>
-            <p class="text-start mb-4 fs-5">Con el compromiso hacia la innovación y excelencia. Siendo pioneros dentro de la región centroamericana en la industria eléctrica, cubrimos un amplio rango de productos y servicios, desde fabricación de transformadores convencionales hasta pruebas avanzadas de laboratorio con equipo de alta calidad. Nuestro personal altamente calificado nos permite atender proyectos de cualquier magnitud, así como también realizar mantenimientos a instalaciones eléctricas existentes.</p>
-        </div>
-    </div--->
-    
-    <div class="container col-xxl-8 px-4 py-5">
+
+    <div class="container col-xxl-8 my-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             <div class="mt-0 text-center col-lg-6">
                 <img src="http://solelectric.com.sv/data1/images/foto.jpg" alt="" style="width: 80%;">
             </div>
             <div class="col-lg-6">
                 <h1 class="display-5 fw-bold lh-1 mb-3">Somos líderes regionales en la industria</h1>
-                <p class="lead">Con el compromiso hacia la innovación y excelencia. Siendo pioneros dentro de la región centroamericana en la industria eléctrica, cubrimos un amplio rango de productos y servicios, desde fabricación de transformadores convencionales hasta pruebas avanzadas de laboratorio con equipo de alta calidad.</p>
+                <p class="lead">Operando desde 2008 con el compromiso hacia la innovación y excelencia. Siendo pioneros dentro de la región centroamericana en la industria eléctrica, cubrimos un amplio rango de productos y servicios, desde fabricación de transformadores convencionales hasta pruebas avanzadas de laboratorio con equipo de alta calidad.</p>
             </div>
         </div>
     </div>
 
-    <div class="divider"></div>
-
-    <!--div class="card mb-3 mx-auto" style="width: 90%;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="https://cdn.pixabay.com/photo/2018/10/24/21/30/electrician-3771316_960_720.jpg" class="img-fluid rounded-start" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Fabricación de transformadores</h5>
-              <p class="card-text">Mediante nuestro taller eléctrico, equipado con maquinaria avanzada y personal altamente calificado, tenemos la capacidad de producción necesaria para suplir cualquier necesidad: desde transformadores comunes para diversas aplicaciones hasta transformadores totalmente personalizados a las necsidades específicas.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-        </div>
-    </div-->
-
     <div class="container my-5">
-        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-4 border shadow-lg">
             <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
                 <h1 class="display-4 fw-bold lh-1">Fabricación de transformadores</h1>
                 <p class="lead">Mediante nuestro taller eléctrico, equipado con maquinaria avanzada y personal altamente calificado, tenemos la capacidad de producción necesaria para suplir cualquier necesidad: desde transformadores comunes para diversas aplicaciones hasta transformadores totalmente personalizados a las necsidades específicas.</p>
@@ -51,186 +26,332 @@
         </div>
     </div>
 
-    <div class="container-fluid px-4 py-3 my-3 mt-0 row row-cols-1 row-cols-md-3 mb-3 text-center ms-0 me-0">
-        <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm">
-            <div class="card-header py-3 text-white bg-dark">
-                <h4 class="my-0 fw-normal">Convencionales</h4>
+    <div class="container my-5 px-0">
+        <div class="container-fluid px-0 py-3 row row-cols-1 row-cols-md-3 text-center mx-0">
+            <div class="col">
+                <div class="card mb-4 rounded-4 shadow-sm">
+                    <div class="card-header rounded-4 py-3 text-black bg-light">
+                        <h4 class="my-0 fw-normal">Convencionales</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">5 ~ 333 KVA</h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Garantía</li>
+                            <li>Bajas pérdidas</li>
+                            <li>Entrega rápida</li>
+                            <li>Personalizable</li>
+                        </ul>
+                        <form class="text-start">
+                            <div class="row mb-3">
+                            <label for="inputEmail3" class="col-4 col-form-label">Correo</label>
+                            <div class="col-8">
+                                <input type="email" class="form-control" id="inputEmail3">
+                            </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputEmail3" class="col-4 col-form-label">Capacidad</label>
+                                <div class="col-8">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Seleccionar primario</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputEmail3" class="col-4 col-form-label">Primario</label>
+                                <div class="col-8">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Seleccionar primario</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputEmail3" class="col-4 col-form-label">Secundario</label>
+                                <div class="col-8">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Seleccionar secundario</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit" class="w-100 btn btn-lg btn-primary">Cotizar</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="card-body">
-                <h1 class="card-title pricing-card-title">5 ~ 333 KVA</h1>
-                <ul class="list-unstyled mt-3 mb-4">
-                    <li>Garantía</li>
-                    <li>Bajas pérdidas</li>
-                    <li>Entrega rápida</li>
-                    <li>Personalizable</li>
-                </ul>
+            <div class="col">
+                <div class="card mb-4 rounded-4 border border-1 shadow-sm">
+                <div class="card-header rounded-4 py-3 text-black bg-light">
+                    <h4 class="my-0 fw-normal">Padmounted</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">5 ~ 333 KVA</h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Garantía</li>
+                        <li>Bajas pérdidas</li>
+                        <li>Entrega rápida</li>
+                        <li>Personalizable</li>
+                    </ul>
+                    <form class="text-start">
+                        <div class="row mb-3">
+                          <label for="inputEmail3" class="col-4 col-form-label">Correo</label>
+                          <div class="col-8">
+                            <input type="email" class="form-control" id="inputEmail3">
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputEmail3" class="col-4 col-form-label">Capacidad</label>
+                            <div class="col-8">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccionar primario</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputEmail3" class="col-4 col-form-label">Primario</label>
+                            <div class="col-8">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccionar primario</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputEmail3" class="col-4 col-form-label">Secundario</label>
+                            <div class="col-8">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccionar secundario</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="w-100 btn btn-lg btn-primary">Cotizar</button>
+                      </form>
+                </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4 rounded-4 border border-1 shadow-sm">
+                <div class="card-header rounded-4 py-3 text-black bg-light">
+                    <h4 class="my-0 fw-normal">Secos</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">5 ~ 333 KVA</h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Garantía</li>
+                        <li>Bajas pérdidas</li>
+                        <li>Entrega rápida</li>
+                        <li>Personalizable</li>
+                    </ul>
+                    <form class="text-start">
+                        <div class="row mb-3">
+                          <label for="inputEmail3" class="col-4 col-form-label">Correo</label>
+                          <div class="col-8">
+                            <input type="email" class="form-control" id="inputEmail3">
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputEmail3" class="col-4 col-form-label">Capacidad</label>
+                            <div class="col-8">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccionar primario</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputEmail3" class="col-4 col-form-label">Primario</label>
+                            <div class="col-8">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccionar primario</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputEmail3" class="col-4 col-form-label">Secundario</label>
+                            <div class="col-8">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccionar secundario</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="w-100 btn btn-lg btn-primary">Cotizar</button>
+                      </form>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                <form class="text-start">
-                    <div class="row mb-3">
-                      <label for="inputEmail3" class="col-4 col-form-label">Correo</label>
-                      <div class="col-8">
-                        <input type="email" class="form-control" id="inputEmail3">
-                      </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="inputEmail3" class="col-4 col-form-label">Capacidad</label>
-                        <div class="col-8">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Seleccionar primario</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="inputEmail3" class="col-4 col-form-label">Primario</label>
-                        <div class="col-8">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Seleccionar primario</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="inputEmail3" class="col-4 col-form-label">Secundario</label>
-                        <div class="col-8">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Seleccionar secundario</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button type="submit" class="w-100 btn btn-lg btn-dark">Cotizar</button>
-                  </form>                
+    <div class="container my-5">
+        <div class="container-fluid g-4 mx-0 text-start row">
+            <div class="col-md-6 my-auto">
+              <h2>Nuestro taller eléctrico</h2>
+              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus accusantium, molestias atque nesciunt et praesentium, voluptate dolor deleniti ut quidem repellendus illum sint suscipit, esse velit accusamus voluptates provident quas?
+              Similique dolore perspiciatis iste. Accusamus repudiandae modi quaerat non eius officia! Et cumque aliquam magni, labore error ipsa laboriosam molestias aperiam dolor laborum ad natus quasi blanditiis accusamus illum. Sunt.
+              Adipisci illum voluptatem, porro expedita eum fuga, atque natus ipsum facere iure sunt vero repudiandae voluptatibus nisi temporibus enim similique id quibusdam velit impedit veritatis? Molestiae sit optio repellendus unde.</p>
             </div>
+            <div class="col-md-6 my-auto">
+                <img src="https://images.pexels.com/photos/10039979/pexels-photo-10039979.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" class="img-fluid rounded shadow mx-auto d-block" alt="...">
+            </div>
+          </div>
+    </div>
+
+    <div class="pb-2 container my-5 px-5">
+        <h2 class="border-bottom">Algunos de nuestros clientes</h2>
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quo vitae possimus. Natus esse, explicabo assumenda eligendi dolore soluta quisquam velit debitis animi quos nulla magni rem nemo facere iusto?
+        Pariatur iure itaque dignissimos corrupti animi tenetur voluptatem, rerum, doloribus at atque qui beatae, harum distinctio et asperiores cum corporis quidem molestias recusandae doloremque magnam. Harum exercitationem natus velit dignissimos?
+        Sed neque itaque vitae rem excepturi, amet sint quam eaque error voluptates soluta aperiam. </p>
+
+        <div class="container-fluid row row-cols-1 row-cols-md-3 g-4 px-0 py-3 ms-0 me-0">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://images.pexels.com/photos/236089/pexels-photo-236089.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Pan Sinaí</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit veritatis illo eum incidunt ex, numquam distinctio assumenda quod saepe eaque optio, magnam corrupti quo suscipit unde. Quia illo aspernatur sunt.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://images.pexels.com/photos/159397/solar-panel-array-power-sun-electricity-159397.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Salvaplastic</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat aut blanditiis ipsam, deleniti, aliquam quam quos maxime consequuntur, modi illo commodi. Dicta enim dolorem minus assumenda hic ipsa optio natus.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://images.pexels.com/photos/942316/pexels-photo-942316.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Diana</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nam porro itaque laborum adipisci maxime, cupiditate aspernatur quasi iure a ex molestias ipsam eius dicta esse inventore. Nam, hic qui.</p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <div class="container my-5 px-5" id="icon-grid">
+        <h2 class="pb-2 border-bottom">Laboratorio</h2>
+        
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa similique, praesentium qui, ab quod non hic soluta ullam numquam quaerat saepe architecto quis ipsum dolorem? Iste asperiores voluptatum explicabo maxime?
+        Earum voluptates saepe dolor nisi fuga suscipit maiores repellendus cumque alias distinctio. Pariatur quaerat, excepturi explicabo dolor delectus fugiat adipisci laudantium, iste suscipit, tempora eos nisi possimus numquam repudiandae quo.</p>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+          <div class="col d-flex align-items-start">
+            <svg class="bi bi-motherboard text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"></svg>
+            <div>
+              <h4 class="fw-bold mb-0">Featured title</h4>
+              <p>Paragraph of text beneath the heading to explain the heading.</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#cpu-fill"></use></svg>
+            <div>
+              <h4 class="fw-bold mb-0">Featured title</h4>
+              <p>Paragraph of text beneath the heading to explain the heading.</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#calendar3"></use></svg>
+            <div>
+              <h4 class="fw-bold mb-0">Featured title</h4>
+              <p>Paragraph of text beneath the heading to explain the heading.</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#home"></use></svg>
+            <div>
+              <h4 class="fw-bold mb-0">Featured title</h4>
+              <p>Paragraph of text beneath the heading to explain the heading.</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#speedometer2"></use></svg>
+            <div>
+              <h4 class="fw-bold mb-0">Featured title</h4>
+              <p>Paragraph of text beneath the heading to explain the heading.</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#toggles2"></use></svg>
+            <div>
+              <h4 class="fw-bold mb-0">Featured title</h4>
+              <p>Paragraph of text beneath the heading to explain the heading.</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#geo-fill"></use></svg>
+            <div>
+              <h4 class="fw-bold mb-0">Featured title</h4>
+              <p>Paragraph of text beneath the heading to explain the heading.</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#tools"></use></svg>
+            <div>
+              <h4 class="fw-bold mb-0">Featured title</h4>
+              <p>Paragraph of text beneath the heading to explain the heading.</p>
+            </div>
+          </div>
+        </div>
+        
+        <h4 class="pb-2 px-4">Algunos de nuestros equipos</h4>
+
+        <div class="container" id="custom-cards">
+            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4">
+              <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-4 shadow-lg" style="background-image: url('https://images.pexels.com/photos/256262/pexels-photo-256262.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
+                  <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                    <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Cromatógrafo completo</h2>                
+                  </div>
+                </div>
+              </div>
+        
+              <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-4 shadow-lg" style="background-image: url('unsplash-photo-2.jpg');">
+                  <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                    <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Rigidez dieléctrica</h2>                
+                  </div>
+                </div>
+              </div>
+        
+              <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-4 shadow-lg" style="background-image: url('unsplash-photo-3.jpg');">
+                  <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                    <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Humedad relativa</h2>                    
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
 
-        <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm">
-            <div class="card-header py-3 text-white bg-dark">
-                <h4 class="my-0 fw-normal">Padmounted</h4>
-            </div>
-            <div class="card-body">
-                <h1 class="card-title pricing-card-title">5 ~ 333 KVA</h1>
-                <ul class="list-unstyled mt-3 mb-4">
-                    <li>Garantía</li>
-                    <li>Bajas pérdidas</li>
-                    <li>Entrega rápida</li>
-                    <li>Personalizable</li>
-                </ul>
-
-                <form class="text-start">
-                    <div class="row mb-3">
-                      <label for="inputEmail3" class="col-4 col-form-label">Correo</label>
-                      <div class="col-8">
-                        <input type="email" class="form-control" id="inputEmail3">
-                      </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="inputEmail3" class="col-4 col-form-label">Capacidad</label>
-                        <div class="col-8">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Seleccionar primario</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="inputEmail3" class="col-4 col-form-label">Primario</label>
-                        <div class="col-8">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Seleccionar primario</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="inputEmail3" class="col-4 col-form-label">Secundario</label>
-                        <div class="col-8">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Seleccionar secundario</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button type="submit" class="w-100 btn btn-lg btn-dark">Cotizar</button>
-                  </form>                
-            </div>
-            </div>
+        <div class="d-grid d-sm-flex justify-content-sm-center my-5">
+            <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Cotizar pruebas</button>
         </div>
-
-        <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm">
-            <div class="card-header py-3 text-white bg-dark">
-                <h4 class="my-0 fw-normal">Secos</h4>
-            </div>
-            <div class="card-body">
-                <h1 class="card-title pricing-card-title">5 ~ 333 KVA</h1>
-                <ul class="list-unstyled mt-3 mb-4">
-                    <li>Garantía</li>
-                    <li>Bajas pérdidas</li>
-                    <li>Entrega rápida</li>
-                    <li>Personalizable</li>
-                </ul>
-
-                <form class="text-start">
-                    <div class="row mb-3">
-                      <label for="inputEmail3" class="col-4 col-form-label">Correo</label>
-                      <div class="col-8">
-                        <input type="email" class="form-control" id="inputEmail3">
-                      </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="inputEmail3" class="col-4 col-form-label">Capacidad</label>
-                        <div class="col-8">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Seleccionar primario</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="inputEmail3" class="col-4 col-form-label">Primario</label>
-                        <div class="col-8">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Seleccionar primario</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="inputEmail3" class="col-4 col-form-label">Secundario</label>
-                        <div class="col-8">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Seleccionar secundario</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button type="submit" class="w-100 btn btn-lg btn-dark">Cotizar</button>
-                  </form>                
-            </div>
-            </div>
-        </div>
-      </div>
-      
+    </div>
 {% endblock %} 
