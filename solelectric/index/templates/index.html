@@ -10,7 +10,50 @@
             <div class="col-lg-6">
                 <h1 class="display-5 fw-bold lh-1 mb-3">Somos líderes regionales en la industria</h1>
                 <p class="fs-4">Operando desde 2008 con el compromiso hacia la innovación y excelencia. Siendo pioneros dentro de la región centroamericana en la industria eléctrica, cubrimos un amplio rango de productos y servicios, desde fabricación de transformadores convencionales hasta pruebas avanzadas de laboratorio con equipo de alta calidad.</p>
-            </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Contáctanos
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Formulario de contacto</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+
+                                <form>
+                                    <div class="modal-body">
+                                        <div class="mb-3">
+                                            <label for="contactUsName" class="form-label">Nombre</label>
+                                            <input type="text" class="form-control" id="contactUsName">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="contactUsEmail" class="form-label">Correo electrónico</label>
+                                            <input type="email" class="form-control" id="contactUsEmail" placeholder="nombre@ejemplo.com">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="contactUsMessage" class="form-label">Mensaje</label>
+                                            <textarea class="form-control" id="contactUsMessage" rows="3" aria-describedby="contactUsMessageHelp"></textarea>
+                                            <div id="contactUsMessageHelp" class="form-text">
+                                                Déjanos saber el país desde donde nos escribes en caso que seas una empresa fuera de El Salvador.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Understood</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
         </div>
     </div>
 
@@ -340,7 +383,7 @@
                             <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
                         </div>
                     </li>
-                    <!-- <li class="timeline-inverted">
+                    <li class="timeline-inverted">
                         <div class="timeline-image">
                             <h4>
                                 Be Part
@@ -350,7 +393,7 @@
                                 Story!
                             </h4>
                         </div>
-                    </li> -->
+                    </li>
                 </ul>
             </div>
         </section>
