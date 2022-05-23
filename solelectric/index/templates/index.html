@@ -25,28 +25,40 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
 
-                                <form>
+                                <form method="POST" action="{{ url_for('index_bp.contact') }}">
+                                    {{ contact_form.csrf_token }}
                                     <div class="modal-body">
                                         <div class="mb-3">
-                                            <label for="contactUsName" class="form-label">Nombre</label>
-                                            <input type="text" class="form-control" id="contactUsName">
+                                            <fieldset>
+                                                <!-- <label for="contactUsName" class="form-label">Nombre</label>
+                                                <input type="text" class="form-control" id="contactUsName"> -->
+                                                {{ contact_form.name.label(class_='form-label') }}
+                                                {{ contact_form.name(class_='form-control', size=50) }}
+                                                
+                                            </fieldset>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="contactUsEmail" class="form-label">Correo electrónico</label>
-                                            <input type="email" class="form-control" id="contactUsEmail" placeholder="nombre@ejemplo.com">
+                                            <!-- <label for="contactUsEmail" class="form-label">Correo electrónico</label>
+                                            <input type="email" class="form-control" id="contactUsEmail" placeholder="nombre@ejemplo.com"> -->
+                                            {{ contact_form.email.label(class_='form-label') }}
+                                            {{ contact_form.email(class_='form-control', placeholder='nombre@ejemplo.com') }}
                                         </div>
                                         <div class="mb-3">
-                                            <label for="contactUsMessage" class="form-label">Mensaje</label>
-                                            <textarea class="form-control" id="contactUsMessage" rows="3" aria-describedby="contactUsMessageHelp"></textarea>
-                                            <div id="contactUsMessageHelp" class="form-text">
+                                            <!-- <label for="contactUsMessage" class="form-label">Mensaje</label>
+                                            <textarea class="form-control" id="contactUsMessage" rows="3" aria-describedby="contactUsMessageHelp"></textarea> -->
+                                            {{ contact_form.body.label(class_='form-label') }}
+                                            {{ contact_form.body(class='form-control', rows='3', aria_describedby='contactUsHelp') }}
+
+                                            <div id="contactUsHelp" class="form-text">
                                                 Déjanos saber el país desde donde nos escribes en caso que seas una empresa fuera de El Salvador.
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Understood</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                        <!-- <button type="button" class="btn btn-primary">Enviar</button> -->
+                                        {{ contact_form.submit(class='btn btn-primary') }}
                                     </div>
                                 </form>
                             </div>
