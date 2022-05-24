@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, url_for, redirect
-from .quote_forms import ContactForm
+from .quote_forms import ContactForm, LabTestQuote, TransformerQuote, SpecialTransformerQuote
 
 
 # Set up blueprint
@@ -9,19 +9,67 @@ index_bp = Blueprint(
     static_folder='static'
 )
 
+
 @index_bp.route( '/')
 def index():
     contact_form = ContactForm()
+    trafo_convencional = TransformerQuote()
+    trafo_padmounted = SpecialTransformerQuote()
+    trafo_seco = SpecialTransformerQuote()
 
     return render_template('index.html',
-    contact_form=contact_form)
+    contact_form=contact_form,
+    convencional_form=trafo_convencional,
+    padmounted_form=trafo_padmounted,
+    seco_form=trafo_seco
+    )
 
 
 @index_bp.route('/contact', methods=['POST'])
 def contact():
-    contact_form = ContactForm()
+    form = ContactForm()
     
-    if contact_form.validate_on_submit():
+    if form.validate_on_submit():
         print('Formulario recibido')
     
+    return redirect(url_for('.index'))
+
+
+@index_bp.route('/standard-trans-quote', methods=['POST'])
+def standard_trans_quote():
+    form = TransformerQuote()
+
+    if form.validate_on_submit():
+        print('Cotización transformador convencional recibida')
+    
+    return redirect(url_for('.index'))
+
+
+@index_bp.route('/padmounted-trans-quote', methods=['POST'])
+def padmounted_trans_quote():
+    form = SpecialTransformerQuote()
+
+    if form.validate_on_submit():
+        print('Cotización transformador padmounted recibida')
+    
+    return redirect(url_for('.index'))
+
+
+@index_bp.route('/dry-trans-quote', methods=['POST'])
+def dry_trans_quote():
+    form = SpecialTransformerQuote()
+
+    if form.validate_on_submit():
+        print('Cotización transformador seco recibida')
+    
+    return redirect(url_for('.index'))
+
+
+@index_bp.route('/lab-test-quote')
+def lab_test_quote():
+    form = LabTestQuote()
+
+    if form.validate_on_submit():
+        print('Cotización prueba de laboratorio recibida')
+
     return redirect(url_for('.index'))
