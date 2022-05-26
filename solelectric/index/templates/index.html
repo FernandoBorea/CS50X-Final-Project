@@ -12,12 +12,12 @@
                 <p class="fs-4">Operando desde 2008 con el compromiso hacia la innovación y excelencia. Siendo pioneros dentro de la región centroamericana en la industria eléctrica, cubrimos un amplio rango de productos y servicios, desde fabricación de transformadores convencionales hasta pruebas avanzadas de laboratorio con equipo de alta calidad.</p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" data-bs-toggle="modal" data-bs-target="#contactUsForm">
                         Contáctanos
                     </button>
                     
                     <!-- Modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal fade" id="contactUsForm" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -97,7 +97,59 @@
                         <span class="d-block lead">Capacidades desde 5 kVA hasta 333 kVA</span>
                         <p class="mt-4 mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non cum nostrum reiciendis nam minus doloribus, suscipit facere consequatur hic ducimus et asperiores magni totam consectetur explicabo, assumenda alias vel omnis!</p>
                         
-                        <button type="submit" class="w-100 btn btn-lg btn-primary">Cotizar</button>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" data-bs-toggle="modal" data-bs-target="#standardTransQuote">
+                            Cotizar
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="standardTransQuote" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Formulario de cotización</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+
+                                    <form method="POST" action="{{ url_for('index_bp.standard_trans_quote') }}">
+                                        {{ convencional_form.csrf_token }}
+                                        <div class="modal-body text-start">
+                                            <div class="mb-3">
+                                                <fieldset>
+                                                    <!-- <label for="contactUsName" class="form-label">Nombre</label>
+                                                    <input type="text" class="form-control" id="contactUsName"> -->
+                                                    {{ convencional_form.name.label(class_='form-label') }}
+                                                    {{ convencional_form.name(class_='form-control', size=50) }}
+                                                    
+                                                </fieldset>
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="contactUsEmail" class="form-label">Correo electrónico</label>
+                                                <input type="email" class="form-control" id="contactUsEmail" placeholder="nombre@ejemplo.com"> -->
+                                                {{ convencional_form.email.label(class_='form-label') }}
+                                                {{ convencional_form.email(class_='form-control', placeholder='nombre@ejemplo.com') }}
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="contactUsMessage" class="form-label">Mensaje</label>
+                                                <textarea class="form-control" id="contactUsMessage" rows="3" aria-describedby="contactUsMessageHelp"></textarea> -->
+                                                {{ convencional_form.body.label(class_='form-label') }}
+                                                {{ convencional_form.body(class='form-control', rows='3', aria_describedby='contactUsHelp') }}
+
+                                                <div id="contactUsHelp" class="form-text">
+                                                    Déjanos saber el país desde donde nos escribes en caso que seas una empresa fuera de El Salvador.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                            <!-- <button type="button" class="btn btn-primary">Enviar</button> -->
+                                            {{ convencional_form.submit(class='btn btn-primary') }}
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

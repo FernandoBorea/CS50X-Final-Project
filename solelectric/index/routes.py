@@ -35,7 +35,7 @@ def contact():
     return redirect(url_for('.index'))
 
 
-@index_bp.route('/standard-trans-quote', methods=['POST'])
+@index_bp.route('/standard_trans_quote', methods=['POST'])
 def standard_trans_quote():
     form = TransformerQuote()
 
@@ -45,7 +45,7 @@ def standard_trans_quote():
     return redirect(url_for('.index'))
 
 
-@index_bp.route('/padmounted-trans-quote', methods=['POST'])
+@index_bp.route('/padmounted_trans_quote', methods=['POST'])
 def padmounted_trans_quote():
     form = SpecialTransformerQuote()
 
@@ -55,7 +55,7 @@ def padmounted_trans_quote():
     return redirect(url_for('.index'))
 
 
-@index_bp.route('/dry-trans-quote', methods=['POST'])
+@index_bp.route('/dry_trans_quote', methods=['POST'])
 def dry_trans_quote():
     form = SpecialTransformerQuote()
 
@@ -65,7 +65,7 @@ def dry_trans_quote():
     return redirect(url_for('.index'))
 
 
-@index_bp.route('/lab-test-quote')
+@index_bp.route('/lab_test_quote')
 def lab_test_quote():
     form = LabTestQuote()
 
