@@ -42,7 +42,7 @@
                                             <input type="email" class="form-control" id="contactUsEmail" placeholder="nombre@ejemplo.com"> -->
                                             {{ contact_form.email.label(class_='form-label') }}
                                             {{ contact_form.email(class_='form-control', placeholder='nombre@ejemplo.com') }}
-                                        </div>
+                                        </div>                                       
                                         <div class="mb-3">
                                             <!-- <label for="contactUsMessage" class="form-label">Mensaje</label>
                                             <textarea class="form-control" id="contactUsMessage" rows="3" aria-describedby="contactUsMessageHelp"></textarea> -->
@@ -130,6 +130,24 @@
                                                 {{ convencional_form.email(class_='form-control', placeholder='nombre@ejemplo.com') }}
                                             </div>
                                             <div class="mb-3">
+                                                <!-- <label for="contactUsEmail" class="form-label">Correo electrónico</label>
+                                                <input type="email" class="form-control" id="contactUsEmail" placeholder="nombre@ejemplo.com"> -->
+                                                {{ convencional_form.primary.label(class_='form-label') }}
+                                                {{ convencional_form.primary(class_='form-control') }}
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="contactUsEmail" class="form-label">Correo electrónico</label>
+                                                <input type="email" class="form-control" id="contactUsEmail" placeholder="nombre@ejemplo.com"> -->
+                                                {{ convencional_form.secondary.label(class_='form-label') }}
+                                                {{ convencional_form.secondary(class_='form-control') }}
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="contactUsEmail" class="form-label">Correo electrónico</label>
+                                                <input type="email" class="form-control" id="contactUsEmail" placeholder="nombre@ejemplo.com"> -->
+                                                {{ convencional_form.special_requirements.label(class_='form-label') }}
+                                                {{ convencional_form.special_requirements(class_='form-control') }}
+                                            </div>
+                                            <div class="mb-3">
                                                 <!-- <label for="contactUsMessage" class="form-label">Mensaje</label>
                                                 <textarea class="form-control" id="contactUsMessage" rows="3" aria-describedby="contactUsMessageHelp"></textarea> -->
                                                 {{ convencional_form.body.label(class_='form-label') }}
@@ -166,7 +184,84 @@
                         <!-- Subtitle -->
                         <span class="d-block lead">Capacidades desde 75 kVA hasta 1,000 kVA</span>
                         <p class="mt-4 mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatem consequuntur aliquam veniam sapiente eius incidunt quo similique ullam facilis maxime iste quia, assumenda, temporibus, odit fugiat nostrum aut recusandae?</p>
-                        <button type="submit" class="w-100 btn btn-lg btn-primary">Cotizar</button>
+                        
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" data-bs-toggle="modal" data-bs-target="#padmountedTransQuote">
+                            Cotizar
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="padmountedTransQuote" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Formulario de cotización</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+
+                                    <form method="POST" action="{{ url_for('index_bp.standard_trans_quote') }}">
+                                        {{ padmounted_form.csrf_token }}
+                                        <div class="modal-body text-start">
+                                            <div class="mb-3">
+                                                <fieldset>
+                                                    <!-- <label for="contactUsName" class="form-label">Nombre</label>
+                                                    <input type="text" class="form-control" id="contactUsName"> -->
+                                                    {{ padmounted_form.name.label(class_='form-label') }}
+                                                    {{ padmounted_form.name(class_='form-control', size=50) }}
+                                                    
+                                                </fieldset>
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="contactUsEmail" class="form-label">Correo electrónico</label>
+                                                <input type="email" class="form-control" id="contactUsEmail" placeholder="nombre@ejemplo.com"> -->
+                                                {{ padmounted_form.email.label(class_='form-label') }}
+                                                {{ padmounted_form.email(class_='form-control', placeholder='nombre@ejemplo.com') }}
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="contactUsEmail" class="form-label">Correo electrónico</label>
+                                                <input type="email" class="form-control" id="contactUsEmail" placeholder="nombre@ejemplo.com"> -->
+                                                {{ padmounted_form.primary.label(class_='form-label') }}
+                                                {{ padmounted_form.primary(class_='form-control') }}
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="contactUsEmail" class="form-label">Correo electrónico</label>
+                                                <input type="email" class="form-control" id="contactUsEmail" placeholder="nombre@ejemplo.com"> -->
+                                                {{ padmounted_form.secondary.label(class_='form-label') }}
+                                                {{ padmounted_form.secondary(class_='form-control') }}
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="contactUsEmail" class="form-label">Correo electrónico</label>
+                                                <input type="email" class="form-control" id="contactUsEmail" placeholder="nombre@ejemplo.com"> -->
+                                                {{ padmounted_form.special_requirements.label(class_='form-label') }}
+                                                {{ padmounted_form.special_requirements(class_='form-control') }}
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="contactUsEmail" class="form-label">Correo electrónico</label>
+                                                <input type="email" class="form-control" id="contactUsEmail" placeholder="nombre@ejemplo.com"> -->
+                                                {{ padmounted_form.core_layout.label(class_='form-label') }}
+                                                {{ padmounted_form.core_layout(class_='form-control') }}
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="contactUsMessage" class="form-label">Mensaje</label>
+                                                <textarea class="form-control" id="contactUsMessage" rows="3" aria-describedby="contactUsMessageHelp"></textarea> -->
+                                                {{ padmounted_form.body.label(class_='form-label') }}
+                                                {{ padmounted_form.body(class='form-control', rows='3', aria_describedby='contactUsHelp') }}
+
+                                                <div id="contactUsHelp" class="form-text">
+                                                    Déjanos saber el país desde donde nos escribes en caso que seas una empresa fuera de El Salvador.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                            <!-- <button type="button" class="btn btn-primary">Enviar</button> -->
+                                            {{ padmounted_form.submit(class='btn btn-primary') }}
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -183,7 +278,84 @@
                         <!-- Subtitle -->
                         <span class="d-block lead">Capacidades desde 75 kVA hasta 500 kVA</span>
                         <p class="mt-4 mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. A sit labore quasi incidunt aut. Cumque pariatur reprehenderit amet, sapiente omnis quidem tempora vitae voluptas sit. Ab optio consequuntur nemo quibusdam!</p>
-                        <button type="submit" class="w-100 btn btn-lg btn-primary">Cotizar</button>
+                        
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" data-bs-toggle="modal" data-bs-target="#dryTransQuote">
+                            Cotizar
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="dryTransQuote" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Formulario de cotización</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+
+                                    <form method="POST" action="{{ url_for('index_bp.standard_trans_quote') }}">
+                                        {{ seco_form.csrf_token }}
+                                        <div class="modal-body text-start">
+                                            <div class="mb-3">
+                                                <fieldset>
+                                                    <!-- <label for="contactUsName" class="form-label">Nombre</label>
+                                                    <input type="text" class="form-control" id="contactUsName"> -->
+                                                    {{ seco_form.name.label(class_='form-label') }}
+                                                    {{ seco_form.name(class_='form-control', size=50) }}
+                                                    
+                                                </fieldset>
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="contactUsEmail" class="form-label">Correo electrónico</label>
+                                                <input type="email" class="form-control" id="contactUsEmail" placeholder="nombre@ejemplo.com"> -->
+                                                {{ seco_form.email.label(class_='form-label') }}
+                                                {{ seco_form.email(class_='form-control', placeholder='nombre@ejemplo.com') }}
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="contactUsEmail" class="form-label">Correo electrónico</label>
+                                                <input type="email" class="form-control" id="contactUsEmail" placeholder="nombre@ejemplo.com"> -->
+                                                {{ seco_form.primary.label(class_='form-label') }}
+                                                {{ seco_form.primary(class_='form-control') }}
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="contactUsEmail" class="form-label">Correo electrónico</label>
+                                                <input type="email" class="form-control" id="contactUsEmail" placeholder="nombre@ejemplo.com"> -->
+                                                {{ seco_form.secondary.label(class_='form-label') }}
+                                                {{ seco_form.secondary(class_='form-control') }}
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="contactUsEmail" class="form-label">Correo electrónico</label>
+                                                <input type="email" class="form-control" id="contactUsEmail" placeholder="nombre@ejemplo.com"> -->
+                                                {{ seco_form.special_requirements.label(class_='form-label') }}
+                                                {{ seco_form.special_requirements(class_='form-control') }}
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="contactUsEmail" class="form-label">Correo electrónico</label>
+                                                <input type="email" class="form-control" id="contactUsEmail" placeholder="nombre@ejemplo.com"> -->
+                                                {{ seco_form.core_layout.label(class_='form-label') }}
+                                                {{ seco_form.core_layout(class_='form-control') }}
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="contactUsMessage" class="form-label">Mensaje</label>
+                                                <textarea class="form-control" id="contactUsMessage" rows="3" aria-describedby="contactUsMessageHelp"></textarea> -->
+                                                {{ seco_form.body.label(class_='form-label') }}
+                                                {{ seco_form.body(class='form-control', rows='3', aria_describedby='contactUsHelp') }}
+
+                                                <div id="contactUsHelp" class="form-text">
+                                                    Déjanos saber el país desde donde nos escribes en caso que seas una empresa fuera de El Salvador.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                            <!-- <button type="button" class="btn btn-primary">Enviar</button> -->
+                                            {{ seco_form.submit(class='btn btn-primary') }}
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -336,16 +508,133 @@
         </div>
 
         <div class="d-grid d-sm-flex justify-content-sm-center my-5">
-            <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Cotizar pruebas</button>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" data-bs-toggle="modal" data-bs-target="#labTestQuote">
+                Cotizar pruebas
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="labTestQuote" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Formulario de cotización</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <form method="POST" action="{{ url_for('index_bp.standard_trans_quote') }}">
+                            {{ lab_form.csrf_token }}
+                            <div class="modal-body text-start">
+                                <div class="mb-3">
+                                    <fieldset>
+                                        <!-- <label for="contactUsName" class="form-label">Nombre</label>
+                                        <input type="text" class="form-control" id="contactUsName"> -->
+                                        {{ lab_form.name.label(class_='form-label') }}
+                                        {{ lab_form.name(class_='form-control', size=50) }}
+                                        
+                                    </fieldset>
+                                </div>
+                                <div class="mb-3">
+                                    <!-- <label for="contactUsEmail" class="form-label">Correo electrónico</label>
+                                    <input type="email" class="form-control" id="contactUsEmail" placeholder="nombre@ejemplo.com"> -->
+                                    {{ lab_form.email.label(class_='form-label') }}
+                                    {{ lab_form.email(class_='form-control') }}
+                                </div>
+                                <div class="mb-3">
+                                    <!-- <label for="contactUsEmail" class="form-label">Correo electrónico</label>
+                                    <input type="email" class="form-control" id="contactUsEmail" placeholder="nombre@ejemplo.com"> -->
+                                    {{ lab_form.test.label(class_='form-label') }}
+                                    {{ lab_form.test(class_='form-control', placeholder='nombre@ejemplo.com') }}
+                                </div>
+                                <div class="mb-3">
+                                    <!-- <label for="contactUsMessage" class="form-label">Mensaje</label>
+                                    <textarea class="form-control" id="contactUsMessage" rows="3" aria-describedby="contactUsMessageHelp"></textarea> -->
+                                    {{ lab_form.body.label(class_='form-label') }}
+                                    {{ lab_form.body(class='form-control', rows='3', aria_describedby='contactUsHelp') }}
+
+                                    <div id="contactUsHelp" class="form-text">
+                                        Déjanos saber el país desde donde nos escribes en caso que seas una empresa fuera de El Salvador.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <!-- <button type="button" class="btn btn-primary">Enviar</button> -->
+                                {{ lab_form.submit(class='btn btn-primary') }}
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="container my-5">
         <div class="p-5 mb-4 bg-light rounded-4 shadow">
             <div class="container-fluid py-5">
-              <h1 class="display-5 fw-bold">Construcción, alquiler y mantenimiento de instalaciones eléctricas</h1>
-              <p class="col-md-8 fs-5">Ofrecemos como parte de nuestro portafolio de productos y servicios el diseño y construcción de instalaciones eléctricas, así como también mantenimiento utilizando equipos de última generación para asegurar el óptimo funcionamiento, incluyendo alternativas de alquiler de equipo en caso de necesitarse mantener la operatividad mientras se sustituyen componentes de la instalación.</p>
-              <button class="btn btn-primary btn-lg" type="button">Cotizar servicios</button>
+                <h1 class="display-5 fw-bold">Construcción, alquiler y mantenimiento de instalaciones eléctricas</h1>
+                <p class="col-md-8 fs-5">Ofrecemos como parte de nuestro portafolio de productos y servicios el diseño y construcción de instalaciones eléctricas, así como también mantenimiento utilizando equipos de última generación para asegurar el óptimo funcionamiento, incluyendo alternativas de alquiler de equipo en caso de necesitarse mantener la operatividad mientras se sustituyen componentes de la instalación.</p>
+                
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" data-bs-toggle="modal" data-bs-target="#servicesQuote">
+                    Cotizar servicios
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="servicesQuote" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Formulario de cotización</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+
+                            <form method="POST" action="{{ url_for('index_bp.standard_trans_quote') }}">
+                                {{ service_form.csrf_token }}
+                                <div class="modal-body text-start">
+                                    <div class="mb-3">
+                                        <fieldset>
+                                            <!-- <label for="contactUsName" class="form-label">Nombre</label>
+                                            <input type="text" class="form-control" id="contactUsName"> -->
+                                            {{ service_form.name.label(class_='form-label') }}
+                                            {{ service_form.name(class_='form-control', size=50) }}
+                                            
+                                        </fieldset>
+                                    </div>
+                                    <div class="mb-3">
+                                        <!-- <label for="contactUsEmail" class="form-label">Correo electrónico</label>
+                                        <input type="email" class="form-control" id="contactUsEmail" placeholder="nombre@ejemplo.com"> -->
+                                        {{ service_form.email.label(class_='form-label') }}
+                                        {{ service_form.email(class_='form-control', placeholder='nombre@ejemplo.com') }}
+                                    </div>
+                                    <div class="mb-3">
+                                        <!-- <label for="contactUsEmail" class="form-label">Correo electrónico</label>
+                                        <input type="email" class="form-control" id="contactUsEmail" placeholder="nombre@ejemplo.com"> -->
+                                        {{ service_form.service.label(class_='form-label') }}
+                                        {{ service_form.service(class_='form-control') }}
+                                    </div>
+                                    <div class="mb-3">
+                                        <!-- <label for="contactUsMessage" class="form-label">Mensaje</label>
+                                        <textarea class="form-control" id="contactUsMessage" rows="3" aria-describedby="contactUsMessageHelp"></textarea> -->
+                                        {{ service_form.body.label(class_='form-label') }}
+                                        {{ service_form.body(class='form-control', rows='3', aria_describedby='contactUsHelp') }}
+
+                                        <div id="contactUsHelp" class="form-text">
+                                            Déjanos saber el país desde donde nos escribes en caso que seas una empresa fuera de El Salvador.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <!-- <button type="button" class="btn btn-primary">Enviar</button> -->
+                                    {{ service_form.submit(class='btn btn-primary') }}
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

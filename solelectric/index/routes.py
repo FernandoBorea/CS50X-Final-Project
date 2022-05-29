@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, url_for, redirect
-from .quote_forms import ContactForm, LabTestQuote, TransformerQuote, SpecialTransformerQuote
+from .quote_forms import ContactForm, LabTestQuote, ServicesQuote, TransformerQuote, SpecialTransformerQuote
 
 
 # Set up blueprint
@@ -16,12 +16,16 @@ def index():
     trafo_convencional = TransformerQuote()
     trafo_padmounted = SpecialTransformerQuote()
     trafo_seco = SpecialTransformerQuote()
+    prueba_lab = LabTestQuote()
+    services = ServicesQuote()
 
     return render_template('index.html',
     contact_form=contact_form,
     convencional_form=trafo_convencional,
     padmounted_form=trafo_padmounted,
-    seco_form=trafo_seco
+    seco_form=trafo_seco,
+    lab_form=prueba_lab,
+    service_form=services
     )
 
 
