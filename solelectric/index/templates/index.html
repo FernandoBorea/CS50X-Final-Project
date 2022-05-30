@@ -199,7 +199,7 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
 
-                                    <form method="POST" action="{{ url_for('index_bp.standard_trans_quote') }}">
+                                    <form method="POST" action="{{ url_for('index_bp.padmounted_trans_quote') }}">
                                         {{ padmounted_form.csrf_token }}
                                         <div class="modal-body text-start">
                                             <div class="mb-3">
@@ -293,7 +293,7 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
 
-                                    <form method="POST" action="{{ url_for('index_bp.standard_trans_quote') }}">
+                                    <form method="POST" action="{{ url_for('index_bp.dry_trans_quote') }}">
                                         {{ seco_form.csrf_token }}
                                         <div class="modal-body text-start">
                                             <div class="mb-3">
@@ -522,7 +522,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
 
-                        <form method="POST" action="{{ url_for('index_bp.standard_trans_quote') }}">
+                        <form method="POST" action="{{ url_for('index_bp.lab_test_quote') }}">
                             {{ lab_form.csrf_token }}
                             <div class="modal-body text-start">
                                 <div class="mb-3">
@@ -590,7 +590,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
 
-                            <form method="POST" action="{{ url_for('index_bp.standard_trans_quote') }}">
+                            <form method="POST" action="{{ url_for('index_bp.services_quote') }}">
                                 {{ service_form.csrf_token }}
                                 <div class="modal-body text-start">
                                     <div class="mb-3">

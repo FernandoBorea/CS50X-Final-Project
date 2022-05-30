@@ -69,11 +69,20 @@ def dry_trans_quote():
     return redirect(url_for('.index'))
 
 
-@index_bp.route('/lab_test_quote')
+@index_bp.route('/lab_test_quote', methods=['POST'])
 def lab_test_quote():
     form = LabTestQuote()
 
     if form.validate_on_submit():
         print('Cotización prueba de laboratorio recibida')
+
+    return redirect(url_for('.index'))
+
+@index_bp.route('/services_quote', methods=['POST'])
+def services_quote():
+    form = ServicesQuote()
+
+    if form.validate_on_submit():
+        print('Cotización servicios recibida')
 
     return redirect(url_for('.index'))
