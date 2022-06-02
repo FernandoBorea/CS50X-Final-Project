@@ -1,5 +1,8 @@
 from flask import Blueprint, render_template, url_for, redirect
 from .quote_forms import ContactForm, LabTestQuote, ServicesQuote, TransformerQuote, SpecialTransformerQuote
+from flask_mail import Message
+from solelectric import mail
+from os import environ
 
 
 # Set up blueprint
@@ -35,6 +38,13 @@ def contact():
     
     if form.validate_on_submit():
         print('Formulario recibido')
+        msg = Message('Test', recipients=environ.get('TARGET_MAIL'))
+        print('msg created')
+        msg.body = 'Test mail'
+        print('Body created')
+        mail.send(msg)
+        print('Mail sent')
+
     
     return redirect(url_for('.index'))
 
