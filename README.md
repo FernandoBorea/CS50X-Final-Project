@@ -6,6 +6,8 @@ First and foremost, let me introduce myself. My name is Fernando Borea (you can 
 
 Even though I do have some background in software development, CS50X is the first formal contact I have with web development. It has indeed been a challenge in some aspects (yep, I've thought of throwing  either the computer or myself out of the window at times haha), but an overall amazing and enjoyable experience.
 
+Here is the video summary: https://youtu.be/IbZPAqjF71g.
+
 Enough side chat, let's get to the project! 😎
 ## Project introduction 📓
 
