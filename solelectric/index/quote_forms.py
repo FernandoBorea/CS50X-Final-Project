@@ -44,11 +44,7 @@ class TransformerQuote(ContactForm):
     )
 
     special_requirements = TextAreaField(
-        'Requisitos especiales',
-        [
-            Length(min=10,
-            message=('EL mensaje es demasiado corto.'))
-        ]
+        'Requisitos especiales'
     )
 
 

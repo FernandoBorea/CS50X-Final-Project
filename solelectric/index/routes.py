@@ -37,13 +37,11 @@ def contact():
     form = ContactForm()
     
     if form.validate_on_submit():
-        print('Formulario recibido')
-        msg = Message('Test', recipients=environ.get('TARGET_MAIL'))
-        print('msg created')
-        msg.body = 'Test mail'
-        print('Body created')
+        msg = Message('Forma de contacto recibida', recipients=[environ.get('TARGET_MAIL')])
+        msg.body = (f'Se ha recibido una solicitud de contacto de {form.name.data}\n\n'
+                    f'Responder en la dirección de correo: {form.email.data}\n\n'
+                    f'Mensaje:\n{form.body.data}')
         mail.send(msg)
-        print('Mail sent')
 
     
     return redirect(url_for('.index'))
@@ -54,7 +52,14 @@ def standard_trans_quote():
     form = TransformerQuote()
 
     if form.validate_on_submit():
-        print('Cotización transformador convencional recibida')
+        msg = Message('Solicitud de cotización: Transformador convencional', recipients=[environ.get('TARGET_MAIL')])
+        msg.body = (f'Se ha recibido una solicitud de contacto de {form.name.data}\n\n'
+                    f'Responder en la dirección de correo: {form.email.data}\n\n'
+                    f'Primario: {form.primary.data}\n'
+                    f'Secundario: {form.secondary.data}\n'
+                    f'Requisitos especiales: {form.special_requirements.data}\n\n'
+                    f'Mensaje:\n{form.body.data}')
+        mail.send(msg)
     
     return redirect(url_for('.index'))
 
@@ -64,7 +69,15 @@ def padmounted_trans_quote():
     form = SpecialTransformerQuote()
 
     if form.validate_on_submit():
-        print('Cotización transformador padmounted recibida')
+        msg = Message('Solicitud de cotización: Transformador padmounted', recipients=[environ.get('TARGET_MAIL')])
+        msg.body = (f'Se ha recibido una solicitud de contacto de {form.name.data}\n\n'
+                    f'Responder en la dirección de correo: {form.email.data}\n\n'
+                    f'Primario: {form.primary.data}\n'
+                    f'Secundario: {form.secondary.data}\n'
+                    f'Diseño del núcleo: {form.core_layout.data}\n'
+                    f'Requisitos especiales: {form.special_requirements.data}\n\n'
+                    f'Mensaje:\n{form.body.data}')
+        mail.send(msg)
     
     return redirect(url_for('.index'))
 
@@ -74,7 +87,15 @@ def dry_trans_quote():
     form = SpecialTransformerQuote()
 
     if form.validate_on_submit():
-        print('Cotización transformador seco recibida')
+        msg = Message('Solicitud de cotización: Transformador seco', recipients=[environ.get('TARGET_MAIL')])
+        msg.body = (f'Se ha recibido una solicitud de contacto de {form.name.data}\n\n'
+                    f'Responder en la dirección de correo: {form.email.data}\n\n'
+                    f'Primario: {form.primary.data}\n'
+                    f'Secundario: {form.secondary.data}\n'
+                    f'Diseño del núcleo: {form.core_layout.data}\n'
+                    f'Requisitos especiales: {form.special_requirements.data}\n\n'
+                    f'Mensaje:\n{form.body.data}')
+        mail.send(msg)
     
     return redirect(url_for('.index'))
 
@@ -84,7 +105,12 @@ def lab_test_quote():
     form = LabTestQuote()
 
     if form.validate_on_submit():
-        print('Cotización prueba de laboratorio recibida')
+        msg = Message('Solicitud de cotización: Prueba de laboratorio', recipients=[environ.get('TARGET_MAIL')])
+        msg.body = (f'Se ha recibido una solicitud de contacto de {form.name.data}\n\n'
+                    f'Responder en la dirección de correo: {form.email.data}\n\n'
+                    f'Prueba de laboratorio solicitada: {form.test.data}\n\n'
+                    f'Mensaje:\n{form.body.data}')
+        mail.send(msg)
 
     return redirect(url_for('.index'))
 
@@ -93,6 +119,11 @@ def services_quote():
     form = ServicesQuote()
 
     if form.validate_on_submit():
-        print('Cotización servicios recibida')
+        msg = Message('Solicitud de cotización: Servicio', recipients=[environ.get('TARGET_MAIL')])
+        msg.body = (f'Se ha recibido una solicitud de contacto de {form.name.data}\n\n'
+                    f'Responder en la dirección de correo: {form.email.data}\n\n'
+                    f'Servicio solicitado: {form.service.data}\n\n'
+                    f'Mensaje:\n{form.body.data}')
+        mail.send(msg)
 
     return redirect(url_for('.index'))
